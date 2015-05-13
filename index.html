@@ -529,25 +529,7 @@ end
 		bottom:0px;
 	}
 /*there you go Rarity*/
-.ghost-button {
-  display: inline-block;
-  width: 200px;
-  padding: 8px;
-  color: #fff;
-  border: 2px solid #fff;
-  text-align: center;
-  outline: none;
-  text-decoration: none;
-  transition: background-color 0.2s ease-out,
-              color 0.2s ease-out;
-}
-.ghost-button:hover,
-.ghost-button:active {
-  background-color: #fff;
-  color: #000;
-  transition: background-color 0.3s ease-in,
-              color 0.3s ease-in;
-}
+
 
 body {
     text-decoration-color: white;
@@ -591,7 +573,38 @@ p {
 		color: #fff;
     }
         
+   /* สำหรับพวกหำเล็ก
+	* --------------------------------------- */       
     @media only screen and (max-width: 767px) {
+.ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+   margin-bottom: 10px;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+    foot {
+    margin-left: 5px;
+    margin-right: 5px;
+}
+    
+    .content {
+        margin-left: 8px;
+        margin-right: 8px;
+    }
 
 num {
     font-size: 3em;
@@ -622,7 +635,7 @@ num {
 }
  
     #section0{
-        background-color: #03A9F4
+        background-color: #03A9F4;
 	}
 	#section1{
 	    background-image:url(//farm9.staticflickr.com/8740/17026875065_5e0f444eb5_o.jpg);
@@ -664,12 +677,9 @@ background-position: center;
         background-repeat: no-repeat;
         background-position: center;
     }
+
      #section10{
-        background-color: #E0E0E0;
-        background-position: center;
-    }
-     #section11{
-        background-color: #F5F5F5;
+        background-color: #FAFAFA;
         background-position: center;
     }
 
@@ -686,7 +696,42 @@ background-position: center;
         color: black;
     }
         
+/* สำหรับพวกหำใหญ่
+	* --------------------------------------- */
+ @media only screen and (min-width: 767px) {
 
+     .ghost-button {
+  display: inline-block;
+  width: 200px;
+  padding: 8px;
+  color: #fff;
+  border: 2px solid #fff;
+  text-align: center;
+  outline: none;
+  text-decoration: none;
+  transition: background-color 0.2s ease-out,
+              color 0.2s ease-out;
+}
+.ghost-button:hover,
+.ghost-button:active {
+  background-color: #fff;
+  color: #000;
+  transition: background-color 0.3s ease-in,
+              color 0.3s ease-in;
+}
+     
+foot {
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content {
+margin-left: 50px;
+margin-right: 50px;
+word-wrap: break-word;
+}
+
+
+ }
 	</style>
 
 	
@@ -706,88 +751,82 @@ background-position: center;
 		$(document).ready(function() {
 			$('#fullpage').fullpage({
 				anchors: ['firstPage', 'secondPage', '3rdPage', '4thPage', '5thPage', '6thPage', '7thPage', '8thPage', '9thPage','lastPage','About'],
-				sectionsColor: ['#03A9F4', '#000000', '#000000', '#000000', '#000000','#000000','#000000','#000000','#000000', '#E0E0E0'],
 				navigation: true,
 				navigationPosition: 'right',
-				navigationTooltips: ['Top', '1', '2', '3', '4', '5', '6', '7', '8','Comment', 'About'],
+				navigationTooltips: ['Top', '1', '2', '3', '4', '5', '6', '7', '8', 'About'],
 				responsive: 900
 			});
 		});
 	</script>
 <div id="header"><a href="//hoof.flatfact.com"><img src="//farm8.staticflickr.com/7600/16849151601_4cc60a30be_o.png"></a></div>
    <!----------------------Facebook Plugin Script------------------------> 
-    <script>
-  window.fbAsyncInit = function() {
-    FB.init({
-      appId      : '1383093242011076',
-      xfbml      : true,
-      version    : 'v2.2'
-    });
-  };
+   <script>
+      window.fbAsyncInit = function() {
+        FB.init({
+          appId      : '1383093242011076',
+          xfbml      : true,
+          version    : 'v2.3'
+        });
+      };
 
-  (function(d, s, id){
-     var js, fjs = d.getElementsByTagName(s)[0];
-     if (d.getElementById(id)) {return;}
-     js = d.createElement(s); js.id = id;
-     js.src = "//connect.facebook.net/en_US/sdk.js";
-     fjs.parentNode.insertBefore(js, fjs);
-   }(document, 'script', 'facebook-jssdk'));
-</script>
+      (function(d, s, id){
+         var js, fjs = d.getElementsByTagName(s)[0];
+         if (d.getElementById(id)) {return;}
+         js = d.createElement(s); js.id = id;
+         js.src = "//connect.facebook.net/en_US/sdk.js";
+         fjs.parentNode.insertBefore(js, fjs);
+       }(document, 'script', 'facebook-jssdk'));
+    </script>
 
     <!----------------------End Script------------------------------------>
 <div id="fullpage">
 	<div class="section" id="section0">
 		<div class="intro">
-			<h1><num>8</num><br>เรื่องที่คุณ(อาจ)ยังไม่รู้เกี่ยวกับ “IE”</div><br><div class="fb-like" data-href="//hoof.flatfact.com/ie-facts/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="false"></div><a href="#secondPage"><div class="arrow bounce"></div></a></h1>
-		
+			<h1><num>8</num><br>เรื่องที่คุณ(อาจ)ยังไม่รู้เกี่ยวกับ “IE”<br><div class="fb-like" data-href="//hoof.flatfact.com/ie-facts/" data-layout="box_count" data-action="like" data-show-faces="true" data-share="true"></div><a href="#secondPage"><div class="arrow bounce"></div></a></h1>
+        </div>
 	</div>
 	<div class="section" id="section1">
 			<div class="intro">
-				<h2><num>1</num><br>Internet Explorer 1 เปิดตัวเมื่อวันที่ 16 สิงหาคม ค.ศ.1995<br>โดยเป็นรุ่นพัฒนาจากการซื้อบราวเซอร์ Mosaic ของบริษัท Spyglass<br>มาเป็น Internet Explorer ของ Microsoft</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
+                <h2><num>1</num><br><div class="content">Internet Explorer 1 เปิดตัวเมื่อวันที่ 16 สิงหาคม ค.ศ.1995 โดยเป็นรุ่นพัฒนาจากการซื้อบราวเซอร์ Mosaic ของบริษัท Spyglass มาเป็น Internet Explorer ของ Microsoft</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
 			</div>
 	</div>
 	<div class="section" id="section2">
 		<div class="intro">
-			<h2><num>2</num><br>ในช่วงปี ค.ศ.2002-2003 Internet Explorer มีส่วนแบ่งการตลาดถึง 95%<br>หลังจากการมาของ Chrome และ Firefox ก็เหลือเพียง 17% เท่านั้น</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
+            <h2><num>2</num><br><div class="content">ในช่วงปี ค.ศ.2002-2003 Internet Explorer มีส่วนแบ่งการตลาดถึง 95% หลังจากการมาของ Chrome และ Firefox ก็เหลือเพียง 17% เท่านั้น</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section3">
 		<div class="intro">
-			<h2><num>3</num><br>Microsoft เคยพัฒนา Internet Explorer ให้ระบบปฏิบัติการ Mac<br>ในปี ค.ศ.1996 แต่อีก 7 ปีให้หลัง Microsoft ก็เลิกพัฒนาไป</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer_for_Mac">SOURCE</a>
+            <h2><num>3</num><br><div class="content">Microsoft เคยพัฒนา Internet Explorer ให้ระบบปฏิบัติการ Mac ในปี ค.ศ.1996 แต่อีก 7 ปีให้หลัง Microsoft ก็เลิกพัฒนาไป</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer_for_Mac">SOURCE</a>
 		</div>
 	</div>
      <div class="section" id="section4">
 		<div class="intro">
-			<h2><num>4</num><br>ในปัจจุบัน Internet Explorer ได้เลิกพัฒนาบนทุกระบบปฏิบัติการแล้ว<br>โดยมีรุ่น 11 เป็นรุ่นสุดท้าย เปิดตัวเมื่อวันที่ 11 มีนาคม ค.ศ.2015</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
+            <h2><num>4</num><br><div class="content">ในปัจจุบัน Internet Explorer ได้เลิกพัฒนาบนทุกระบบปฏิบัติการแล้วโดยมีรุ่น 11 เป็นรุ่นสุดท้าย เปิดตัวเมื่อวันที่ 11 มีนาคม ค.ศ.2015</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section5">
 		<div class="intro">
-			<h2><num>5</num><br>Internet Explorer เริ่มพัฒนาขึ้นโดยนักพัฒนาเพียง 6 คนเท่านั้น</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
+            <h2><num>5</num><br><div class="content">Internet Explorer เริ่มพัฒนาขึ้นโดยนักพัฒนาเพียง 6 คนเท่านั้น</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Internet_Explorer">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section6">
 		<div class="intro">
-			<h2><num>6</num><br>ในปี ค.ศ.1999 ถือเป็นยุคทองของ Internet Explorer<br>เพราะ Microsoft ทุ่มงบพัฒนากว่า 3,000 ล้านบาทต่อปี<br>พร้อมด้วยนักพัฒนาอีกกว่า 1,000 คน</h2><br><a class="ghost-button" href="//www.justice.gov/atr/cases/f2600/2613-1.htm">SOURCE</a>
+            <h2><num>6</num><br><div class="content">ในปี ค.ศ.1999 ถือเป็นยุคทองของ Internet Explorer เพราะ Microsoft ทุ่มงบพัฒนากว่า 3,000 ล้านบาทต่อปี พร้อมด้วยนักพัฒนาอีกกว่า 1,000 คน</div></h2><br><a class="ghost-button" href="//www.justice.gov/atr/cases/f2600/2613-1.htm">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section7">
 		<div class="intro">
-            <h2><num>7</num><br>หลังจากการที่ Microsoft ตัดสินใจรวม Internet Explorer<br>เข้ากับ Windows 95 Microsoft ได้ถูกอัยการจาก 20 รัฐทั่วสหรัฐฯฟ้อง<br>ถึงแม้ศาลจะไม่ได้ตัดสินให้ Microsoft แพ้แต่ก็ส่งผลเสียต่อภาพลักษณ์ของ Internet Explorer มาถึงทุกวันนี้</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/United_States_v._Microsoft_Corp.">SOURCE</a>
+            <h2><num>7</num><br><div class="content">หลังจากการที่ Microsoft ตัดสินใจรวม Internet Explorer เข้ากับ Windows 95 Microsoft ได้ถูกอัยการจาก 20 รัฐทั่วสหรัฐฯฟ้อง ถึงแม้ศาลจะไม่ได้ตัดสินให้ Microsoft แพ้แต่ก็ส่งผลเสียต่อภาพลักษณ์ของ Internet Explorer มาถึงทุกวันนี้</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/United_States_v._Microsoft_Corp.">SOURCE</a>
 		</div>
 	</div>
     <div class="section" id="section8">
 		<div class="intro">
-            <h2><num>8</num><br>หลังจากการจากไปของ Internet Explorer<br>Microsoft ได้ทำการเปิดตัว Project Spartan โครงการบราวเซอร์ตัวใหม่</h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Spartan_%28browser%29">SOURCE</a>
+            <h2><num>8</num><br><div class="content">หลังจากการจากไปของ Internet Explorer Microsoft ได้ทำการเปิดตัว Project Spartan โครงการบราวเซอร์ตัวใหม่</div></h2><br><a class="ghost-button" href="//en.wikipedia.org/wiki/Spartan_%28browser%29">SOURCE</a>
 		</div>
 	</div>
 
     <div class="section" id="section10">
-		<div class="intro"><h1>Comments!</h1>
-           <div class="fb-like" data-href="//hoof.flatfact.com/ie-facts/" data-layout="button_count" data-action="like" data-show-faces="true" data-share="true"></div><br><br><div class="fb-comments" data-href="//hoof.flatfact.com/ie-facts/" data-numposts="3" data-colorscheme="light"></div>
-        </div>
-	</div>
-    <div class="section" id="section11">
-    <div class="intro"><h2></div><div align="center">CC Subthai_Production, Hoof.fr and Flatfact.com<br>บทความต่างๆในเว็บไซต์ อนุญาตให้นำไปเผยแพร่และแก้ไขได้โดยต้องอ้างอิงที่มาและไม่ใช้เพื่อการค้า ตาม<a href="https://creativecommons.org/licenses/by-nc/4.0/">สัญญาอนุญาตครีเอทีฟคอมมอนส์ 4.0 International</a>.<br>Powered by Jquery Fullpage.js on<a href="https://github.com/alvarotrigo/fullPage.js"> Github</a><br><br><a class="button button-primary" href="//facebook.com/subthaiTV">Facebook Page</a><a class="button button-primary" href="//github.com/flatfact">Fork Me On GitHub</a><br><br><br><br><a href="#firstPage"><div id="animated-example" class="animated bounce"><img src="//farm8.staticflickr.com/7601/16623750648_f4c543a294_o.png" width="40px"></div></a></div></div></div></div></h2>
+    <div class="intro"><h2></div><div align="center"><foot>CC Subthai_Production, Hoof.fr and Flatfact.com<br>บทความต่างๆในเว็บไซต์ อนุญาตให้นำไปเผยแพร่และแก้ไขได้โดยต้องอ้างอิงที่มาและไม่ใช้เพื่อการค้า ตาม<a href="https://creativecommons.org/licenses/by-nc/4.0/">สัญญาอนุญาตครีเอทีฟคอมมอนส์ 4.0 International</a>.</foot><br>Powered by Jquery Fullpage.js on<a href="https://github.com/alvarotrigo/fullPage.js"> Github</a><br><br><a class="button button-primary" href="//facebook.com/subthaiTV">Facebook Page</a><a class="button button-primary" href="//github.com/flatfact">Fork Me On GitHub</a><br><br><br><br><a href="#firstPage"><div id="animated-example" class="animated bounce"><img src="//farm8.staticflickr.com/7601/16623750648_f4c543a294_o.png" width="40px"></div></a></div></div></div></div></h2>
 </body>
 </html>
